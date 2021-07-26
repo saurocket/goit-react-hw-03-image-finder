@@ -10,6 +10,7 @@ import {useHttp} from "../../hook/useHttp";
 import {useAlert} from "../../hook/useAlert";
 import * as Scroll from 'react-scroll';
 import {Element} from 'react-scroll'
+import {PreloaderPage} from "./Content/PreloaderPage";
 
 
 
@@ -102,7 +103,10 @@ export const TableSection = () => {
                 {imgS.length > 0 ?
                         <ContentWithProps img={imgS}/>
                     :
-                    <DefaultContent/>
+                    loading ?
+                        <PreloaderPage/> :
+                        <DefaultContent/>
+
                 }
                 {showBtn &&
                 <Element name='scrollBtn'>

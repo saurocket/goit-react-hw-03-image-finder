@@ -1,7 +1,7 @@
 import {Container, makeStyles} from "@material-ui/core"
 
 import React from "react";
-import errorPage from '../../../assets/404.png';
+import spiner from '../../../assets/spiner.svg';
 
 const useStyle = makeStyles((theme) => ({
 
@@ -11,11 +11,11 @@ const useStyle = makeStyles((theme) => ({
 }))
 
 
-export const DefaultContent = () => {
+export const PreloaderPage = () => {
 
     const classes = useStyle()
     return <Container  className={classes.cardMedia}>
-        <img src={errorPage} alt="not found"/>
+        <img src={spiner} alt="spinner"/>
 
 
     </Container>
